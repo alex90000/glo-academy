@@ -28,3 +28,20 @@ const swiper = new Swiper('.swiper', {
         }
     }
 });
+
+
+const modalWindow = document.querySelector('.modal');
+const buttonModal = document.querySelector('.main_display__button');
+
+buttonModal.addEventListener('click', () => {
+    modalWindow.classList.add('active');
+    document.body.classList.add('stop-scrolling');
+});
+
+modalWindow.addEventListener('click', (e) => {
+    const isModal = e.target.closest('.modal__inner');
+    if (!isModal) {
+        modalWindow.classList.remove('active');
+        document.body.classList.remove('stop-scrolling');
+    }
+})

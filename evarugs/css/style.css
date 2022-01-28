@@ -16,6 +16,11 @@ body {
     scroll-behavior: smooth;
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 img {
     width: 100%;
     height: 100%;
@@ -411,4 +416,127 @@ h6 {
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 114%;
+}
+
+/*----------------*/
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    backdrop-filter: blur(4rem);
+    padding: 3rem 0;
+    display: none;
+    z-index: 100;
+}
+
+.modal__inner {
+    position: relative;
+    z-index: 150;
+    background: white url('../img/modal-back.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 3.5rem rgba(212, 20, 90, 0.25);
+    border-radius: 1.5rem;
+    padding: 7rem 21rem 5rem 21rem;
+    margin: auto auto;
+}
+
+.modal__inner-header {
+    margin-bottom: 4rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 117%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modal__inner-elements {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal__item {
+    width: 75rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__item-long {
+    width: 100%;
+    min-height: 8rem;
+    margin-bottom: 4rem;
+}
+
+.modal__item:first-child {
+    margin-bottom: 1.7rem;
+}
+
+.modal__input input {
+    width: 36rem;
+    min-height: 5rem;
+    background: white;
+    border: .1rem solid #A2A2A2;
+    box-sizing: border-box;
+    border-radius: .9rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: #989898;
+    padding-left: 2.1rem;
+    padding-right: 2.1rem;
+}
+
+.modal__item textarea {
+    background: white;
+    border: .1rem solid #A2A2A2;
+    box-sizing: border-box;
+    border-radius: .9rem;
+    width: 100%;
+    min-height: 9rem;
+    color: #989898;
+    outline: none;
+    resize: none;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 114%;
+    padding: 2.1rem;
+    margin-bottom: 5rem;
+}
+
+.modal__button {
+    max-width: 17rem;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 115%;
+    padding: 1.5rem 3rem;
+}
+
+.modal__policy {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    display: flex;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.modal__policy input {
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.modal__policy a {
+    text-decoration: none;
+}
+
+.active {
+    display: flex;
 }
